@@ -1,4 +1,4 @@
 class MyTask < ApplicationRecord
-  belongs_to :Task
+  belongs_to :task
   belongs_to :user
 end
