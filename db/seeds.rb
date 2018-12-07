@@ -189,6 +189,7 @@ my_task_attributes = [
   completed: false,
   frequency: 100,
   notes: "none for this task",
+  status: false,
   task_id: 1,
   user_id: 1
 },
@@ -197,6 +198,7 @@ my_task_attributes = [
   completed: false,
   frequency: 365,
   notes: "none for this task",
+  status: false,
   task_id: 2,
   user_id: 1
 },
@@ -205,6 +207,7 @@ my_task_attributes = [
   completed: false,
   frequency: 100,
   notes: "none for this task",
+  status: false,
   task_id: 3,
   user_id: 2
 },
@@ -213,6 +216,7 @@ my_task_attributes = [
   completed: true,
   frequency: 100,
   notes: "none for this task",
+  status: false,
   task_id: 4,
   user_id: 2
 },
@@ -221,6 +225,7 @@ my_task_attributes = [
   completed: false,
   frequency: 100,
   notes: "none for this task",
+  status: false,
   task_id: 5,
   user_id: 3
 },
@@ -229,6 +234,7 @@ my_task_attributes = [
   completed: false,
   frequency: 30,
   notes: "none for this task",
+  status: false,
   task_id: 6,
   user_id: 3
 },
@@ -237,6 +243,7 @@ my_task_attributes = [
   completed: true,
   frequency: 100,
   notes: "none for this task",
+  status: false,
   task_id: 8,
   user_id: 4
 },
@@ -245,6 +252,7 @@ my_task_attributes = [
   completed: false,
   frequency: 100,
   notes: "none for this task",
+  status: false,
   task_id: 12,
   user_id: 4
 }
