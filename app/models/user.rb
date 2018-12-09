@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :tasks , through: :my_tasks
+  has_one :profile
 
   include Devise::JWT::RevocationStrategies::JTIMatcher
   # Include default devise modules. Others available are:
