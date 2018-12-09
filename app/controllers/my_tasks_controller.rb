@@ -1,52 +1,51 @@
 class MyTasksController < ApplicationController
-  before_action :set_mytask, only: [:show, :update, :destroy]
+  before_action :set_my_task, only: [:show, :update, :destroy]
 
-  # GET /mytasks
+  # GET /my_tasks
   def index
-    @mytasks = MyTask.all
+    @my_tasks = MyTask.all
 
-    render json: @mytasks
+    render json: @my_tasks
   end
 
-  # GET /mytasks/1
+  # GET /my_tasks/1
   def show
-    render json: @mytask
+    render json: @my_task
   end
 
-  # POST /mytasks
+  # POST /my_tasks
   def create
-    @mytask = MyTask.new(my_task_params)
+    @my_task = MyTask.new(my_task_params)
 
-    if @mytask.save
-      render json: @mytask, status: :created, location: @mytask
+    if @my_task.save
+      render json: @my_task, status: :created, location: @my_task
     else
-      render json: @mytask.errors, status: :unprocessable_entity
+      render json: @my_task.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /mytasks/1
+  # PATCH/PUT /my_tasks/1
   def update
-    if @mytask.update(my_task_params)
-      render json: @mytask
+    if @my_task.update(my_task_params)
+      render json: @my_task
     else
-      render json: @mytask.errors, status: :unprocessable_entity
+      render json: @my_task.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /mytasks/1
+  # DELETE /my_tasks/1
   def destroy
-    @mytask.destroy
+    @my_task.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_mytask
-      @mytask = MyTask.find(params[:id])
+    def set_my_task
+      @my_task = MyTask.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def my_task_params
-      params.require(:newMyTaskObject).permit(:task_id,:user_id,:due_date,:status,:frequency,:notes)
+      params.fetch(:my_task, {})
     end
-
 end
