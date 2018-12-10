@@ -5,7 +5,11 @@ class MyTasksController < ApplicationController
   # GET /user/my_task/:user_id
   def show_user_tasks
     @user = User.find(params[:user_id])
-    @my_tasks = @user.my_tasks
+    @user_tasks = @user.my_tasks
+    @my_tasks = []
+    @user_tasks.each do | el |
+      @my_tasks << {my_task: el, task: el.task}
+    end
     # @my_tasks = current_user.my_tasks
     render json: @my_tasks
   end
