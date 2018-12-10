@@ -1,5 +1,14 @@
 class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :update, :destroy]
+  # before_action :authenticate_user!
+
+  # GET /user/my_task/:user_id
+  def show_user_tasks
+    @user = User.find(params[:user_id])
+    @my_tasks = @user.my_tasks
+    # @my_tasks = current_user.my_tasks
+    render json: @my_tasks
+  end
 
   # GET /my_tasks
   def index
