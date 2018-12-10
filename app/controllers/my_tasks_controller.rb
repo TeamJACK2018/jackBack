@@ -12,14 +12,18 @@ class MyTasksController < ApplicationController
 
   # GET /my_tasks
   def index
-    @my_tasks = MyTask.all
+    @all_my_tasks = MyTask.all
+    @my_tasks = []
+    @all_my_tasks.each do | el |
+       @my_tasks << {my_task: el, tasks: el.task}
+    end
 
     render json: @my_tasks
   end
 
   # GET /my_tasks/1
   def show
-    render json: @my_task
+    render json: {mytask: @my_task, task: @my_task.task}
   end
 
   # POST /my_tasks
