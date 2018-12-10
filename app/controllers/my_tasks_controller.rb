@@ -8,7 +8,7 @@ class MyTasksController < ApplicationController
     @user_tasks = @user.my_tasks
     @my_tasks = []
     @user_tasks.each do | el |
-      @my_tasks << {my_task: el, tasks: el.task}
+      @my_tasks << {my_task: el, task: el.task}
     end
     # @my_tasks = current_user.my_tasks
     render json: @my_tasks
