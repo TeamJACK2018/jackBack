@@ -4,9 +4,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   def index
     @appointments = Appointment.all
-
+    # if @appointments.length.zero?
+    #   flash[:alert] = 'You have no appointments. Create one now to get started.'
+    # end
     render json: @appointments
   end
+
 
   # GET /appointments/1
   def show
