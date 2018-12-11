@@ -7,13 +7,13 @@ class Appointment < ActiveRecord::Base
 
   # Notify our appointment attendee X minutes before the appointment time
   def reminder
-    @twilio_number = ENV['+14243206946']
-    account_sid = ENV['AC8b9e42fead05227449ff837386b7e80e']
-    @client = Twilio::REST::Client.new account_sid, ENV['59b5bb2b2c8a35a3d46feedfc8803ce6']
+    twilio_number = '+14243206946'
+    account_sid = 'AC8b9e42fead05227449ff837386b7e80e'
+    client = Twilio::REST::Client.new account_sid, '59b5bb2b2c8a35a3d46feedfc8803ce6'
     time_str = ((self.time).localtime).strftime("%I:%M%p on %b. %d, %Y")
     reminder = "Hi #{self.name}. Just a reminder that you have an appointment coming up at #{time_str}."
-    message = @client.api.account(account_sid).messages.create(
-      :from => @twilio_number,
+    message = client.api.account.messages.create(
+      :from => twilio_number,
       :to => self.phone_number,
       :body => reminder,
     )

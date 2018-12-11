@@ -13,6 +13,8 @@ gem 'delayed_job_active_record'
 # Need daemons to start delayed_job
 gem 'daemons'
 
+gem 'twilio-ruby', '~> 5.17.0'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
