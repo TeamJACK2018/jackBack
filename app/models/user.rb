@@ -12,4 +12,13 @@ class User < ApplicationRecord
          :validatable,
          :jwt_authenticatable,
          jwt_revocation_strategy: self
+
+  def profile_attributes=(value)
+    @profile_attributes = value
+    self.build_profile(value)
+  end
+
+  def profile_attributes
+    @profile_attributes ||= self.profile&.attributes
+  end
 end
