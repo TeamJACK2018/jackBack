@@ -1,6 +1,6 @@
 class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :update, :destroy]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /user/my_task/:user_id
   def show_user_tasks
