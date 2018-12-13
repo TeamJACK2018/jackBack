@@ -209,19 +209,19 @@ task_attributes = [
     },
     {
     title: "Tire Pressure",
-    description: "Check tire pressure and inspect for damage. ",
+    description: "Check tire pressure and inspect for damage.",
     category: "Car",
     sub_category: "General Maintenance"
     },
     {
     title: "Major Car Maintenance ",
-    description: "Schedule car to have major car maintenance check. ",
+    description: "Schedule car to have major car maintenance check.",
     category: "Car",
     sub_category: "Schedule car to have major car maintenance check. "
     },
     {
     title: "Check Fluids",
-    description: "Check all fluids in car, top off as needed. ",
+    description: "Check all fluids in car, top off as needed.",
     category: "Car",
     sub_category: "Miscellaneous"
     },
@@ -329,7 +329,7 @@ task_attributes = [
     },
     {
     title: "Dryer Vents",
-    description: "Clean interior and exterior dryer vent, checking for clogs in the venting. ",
+    description: "Clean interior and exterior dryer vent, checking for clogs in the venting.",
     category: "House",
     sub_category: "Cleaning"
     },
@@ -881,7 +881,7 @@ task_attributes = [
     },
     {
     title: "Pruning",
-    description: "Prune bushes and trees. Trim decorative grasses. ",
+    description: "Prune bushes and trees. Trim decorative grasses.",
     category: "House",
     sub_category: "Yard"
     },
