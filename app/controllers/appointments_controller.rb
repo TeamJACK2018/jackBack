@@ -24,10 +24,8 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-        format.json { render :show, status: :created, location: @appointment }
+        format.json { render json: @appointment, status: :created }
       else
-        format.html { render :new }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end
     end
@@ -55,6 +53,6 @@ class AppointmentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def appointment_params
-      params.require(:appointment).permit(:name, :phone_number, :time)
+      params.require(:appointment).permit(:name, :phone_number, :exact_time)
     end
 end
