@@ -1,7 +1,7 @@
 class Appointment < ActiveRecord::Base
   validates :name, presence: true
   validates :phone_number, presence: true
-  validates :exactTime, presence: true
+  validates :exact_time, presence: true
 
   after_create :reminder
 
@@ -10,7 +10,7 @@ class Appointment < ActiveRecord::Base
     twilio_number = ENV['TWILIO_NUMBER']
     account_sid = ENV['TWILIO_ACCOUNT_SID']
     client = Twilio::REST::Client.new account_sid, ENV['TWILIO_AUTH_TOKEN']
-    time_str = ((self.exactTime).localtime).strftime("%I:%M%p on %b. %d, %Y")
+    time_str = ((self.exact_time).localtime).strftime("%I:%M%p on %b. %d, %Y")
     reminder = "Hi #{self.name}. Just a reminder that you have an appointment coming up at #{time_str}."
     message = client.api.account.messages.create(
       :from => twilio_number,
@@ -21,7 +21,7 @@ class Appointment < ActiveRecord::Base
 
   def when_to_run
     minutes_before_appointment = 1.minutes
-    exactTime - minutes_before_appointment
+    exact_time - minutes_before_appointment
   end
 
   handle_asynchronously :reminder, :run_at => Proc.new { |i| i.when_to_run }
