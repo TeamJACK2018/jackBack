@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_14_173910) do
+ActiveRecord::Schema.define(version: 2018_12_14_004057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 2018_12_14_173910) do
   create_table "appointments", force: :cascade do |t|
     t.string "name"
     t.string "phone_number"
-    t.datetime "time"
+    t.datetime "exact_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "my_task_id"
+    t.index ["my_task_id"], name: "index_appointments_on_my_task_id"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -87,6 +89,7 @@ ActiveRecord::Schema.define(version: 2018_12_14_173910) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "appointments", "my_tasks"
   add_foreign_key "my_tasks", "tasks"
   add_foreign_key "my_tasks", "users"
   add_foreign_key "profiles", "users"
