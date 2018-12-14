@@ -33,33 +33,37 @@ profile_attributes = [
   {
     first_name: "Andy",
     last_name: "Garrett",
-    phone: "800-555-5555",
+    phone: "+13256602651",
     home_owner: true,
     car_owner: true,
+    pet_owner: true,
     user_id: 1
   },
   {
     first_name: "Julianne",
     last_name: "Peters",
-    phone: "800-555-1212",
+    phone: "+12086310997",
     home_owner: true,
     car_owner: true,
+    pet_owner: true,
     user_id: 2
   },
   {
     first_name: "Kristen",
     last_name: "McCloud",
-    phone: "800-777-7777",
+    phone: "+16618775640",
     home_owner: true,
     car_owner: true,
+    pet_owner: true,
     user_id: 3
   },
   {
     first_name: "Chris",
     last_name: "Stubbs",
-    phone: "800-123-4567",
+    phone: "+16199484194",
     home_owner: true,
     car_owner: true,
+    pet_owner: true,
     user_id: 4
   }
 ]
