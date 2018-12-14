@@ -13,7 +13,7 @@ class Appointment < ActiveRecord::Base
     twilio_number = ENV['TWILIO_NUMBER']
     account_sid = ENV['TWILIO_ACCOUNT_SID']
     client = Twilio::REST::Client.new account_sid, ENV['TWILIO_AUTH_TOKEN']
-    time_str = ((self.exact_time).localtime).strftime("%I:%M%p on %b. %d, %Y")
+    time_str = ((self.exact_time).localtime("+00:00")).strftime("%I:%M%p on %b. %d, %Y")
     reminder = "Hi #{self.name}. TASK ALERT: This is your #{task_category} reminder: #{task_title}. You set your reminder for #{time_str}. To see details, check your profile for more information. \n -Own Up Grown Up"
     message = client.api.account.messages.create(
       :from => twilio_number,
