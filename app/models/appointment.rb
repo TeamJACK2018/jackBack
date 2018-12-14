@@ -3,6 +3,8 @@ class Appointment < ActiveRecord::Base
   validates :phone_number, presence: true
   validates :exact_time, presence: true
 
+  belongs_to :my_task
+
   after_create :reminder
 
   # Notify our appointment attendee X minutes before the appointment time
