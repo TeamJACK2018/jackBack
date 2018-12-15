@@ -873,7 +873,8 @@ my_task_attributes = [
   frequency: 100,
   notes: "none for this task",
   task_id: 1,
-  user_id: 1
+  user_id: 1,
+  exact_time: "",
 },
 {
   due_date: 4.months.from_now,
@@ -881,7 +882,8 @@ my_task_attributes = [
   frequency: 365,
   notes: "none for this task",
   task_id: 2,
-  user_id: 1
+  user_id: 1,
+  exact_time: "",
 },
 {
   due_date: 10.months.from_now,
@@ -889,7 +891,8 @@ my_task_attributes = [
   frequency: 100,
   notes: "none for this task",
   task_id: 3,
-  user_id: 2
+  user_id: 2,
+  exact_time: "",
 },
 {
   due_date: 9.months.from_now,
@@ -897,7 +900,8 @@ my_task_attributes = [
   frequency: 100,
   notes: "none for this task",
   task_id: 4,
-  user_id: 2
+  user_id: 2,
+  exact_time: "",
 },
 {
   due_date: 8.months.from_now,
@@ -905,7 +909,8 @@ my_task_attributes = [
   frequency: 100,
   notes: "none for this task",
   task_id: 5,
-  user_id: 3
+  user_id: 3,
+  exact_time: "",
 },
 {
   due_date: 7.months.from_now,
@@ -913,7 +918,8 @@ my_task_attributes = [
   frequency: 30,
   notes: "none for this task",
   task_id: 6,
-  user_id: 3
+  user_id: 3,
+  exact_time: "",
 },
 {
   due_date: 6.months.from_now,
@@ -921,7 +927,8 @@ my_task_attributes = [
   frequency: 100,
   notes: "none for this task",
   task_id: 8,
-  user_id: 4
+  user_id: 4,
+  exact_time: "",
 },
 {
   due_date: 5.months.from_now,
@@ -929,7 +936,8 @@ my_task_attributes = [
   frequency: 100,
   notes: "none for this task",
   task_id: 12,
-  user_id: 4
+  user_id: 4,
+  exact_time: "",
 }
 ]
 
