@@ -1,6 +1,6 @@
 class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :update, :destroy]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /user/my_task/:user_id
   def show_user_tasks
@@ -16,13 +16,7 @@ class MyTasksController < ApplicationController
 
   # GET /my_tasks
   def index
-    @all_my_tasks = MyTask.all
-    @my_tasks = []
-    @all_my_tasks.each do | el |
-       @my_tasks << {my_task: el, tasks: el.task}
-    end
-
-    render json: @my_tasks
+    @my_tasks = MyTask.all
   end
 
   # GET /my_tasks/1
