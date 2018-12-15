@@ -10,18 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_232631) do
+ActiveRecord::Schema.define(version: 2018_12_14_232348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "appointments", force: :cascade do |t|
-    t.string "name"
-    t.string "phone_number"
-    t.datetime "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
@@ -47,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_232631) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "exact_time"
     t.index ["task_id"], name: "index_my_tasks_on_task_id"
     t.index ["user_id"], name: "index_my_tasks_on_user_id"
   end
@@ -60,6 +53,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_232631) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "pet_owner"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
