@@ -17,7 +17,5 @@ json.my_tasks @my_tasks do | my_task |
     json.sub_category my_task.task.sub_category
 
   end
-  json.appointmentName my_task.user.profile.first_name
-  json.appointmentPhone my_task.user.profile.phone
-  json.appointmentTime my_task.due_date
+
 end

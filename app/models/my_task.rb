@@ -3,6 +3,7 @@ class MyTask < ApplicationRecord
   validates :user_id, presence: true
   validates :due_date, presence: true
   validates :frequency, presence: true
+  validates :exact_time, presence: true
 
   belongs_to :task
   belongs_to :user
