@@ -6,5 +6,10 @@ RSpec.describe "MyTasks", type: :request do
       get my_tasks_path
       expect(response).to have_http_status(200)
     end
+
+    it "is an array" do
+      get my_tasks_path
+      expect(response.pop()).to_not raise_error
+    end
   end
 end
