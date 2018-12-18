@@ -37,9 +37,9 @@ profile_attributes = [
     home_owner: true,
     car_owner: true,
     pet_owner: true,
-    medical_owner: true,
-    financial_owner: true,
-    msic_owner: true,
+    medical: true,
+    financial: true,
+    misc: true,
     user_id: 1
   },
   {
@@ -49,9 +49,9 @@ profile_attributes = [
     home_owner: true,
     car_owner: true,
     pet_owner: true,
-    medical_owner: true,
-    financial_owner: true,
-    msic_owner: true,
+    medical: true,
+    financial: true,
+    misc: true,
     user_id: 2
   },
   {
@@ -61,9 +61,9 @@ profile_attributes = [
     home_owner: true,
     car_owner: true,
     pet_owner: true,
-    medical_owner: true,
-    financial_owner: true,
-    msic_owner: true,
+    medical: true,
+    financial: true,
+    misc: true,
     user_id: 3
   },
   {
@@ -73,9 +73,9 @@ profile_attributes = [
     home_owner: true,
     car_owner: true,
     pet_owner: true,
-    medical_owner: true,
-    financial_owner: true,
-    msic_owner: true,
+    medical: true,
+    financial: true,
+    misc: true,
     user_id: 4
   }
 ]
