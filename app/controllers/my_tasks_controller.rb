@@ -2,9 +2,10 @@ class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :update, :destroy]
   before_action :authenticate_user!
 
+
   # GET /user/my_task/:user_id
   def show_user_tasks
-    @user = User.find(params[:user_id])
+    @user = User.find(current_user)
     @user_tasks = @user.my_tasks
     @my_tasks = []
     @user_tasks.each do | el |
