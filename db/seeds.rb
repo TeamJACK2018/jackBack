@@ -6,82 +6,76 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_attributes = [
-  {
-    email: "athomasgarrett@gmail.com",
-    password: "admin1"
-  },
-  {
-    email: "julianne.peters@gmail.com",
-    password: "123134"
-  },
-  {
-    email: "krisnmccloud@gmail.com",
-    password: "admin2"
-  },
-  {
-    email: "christopherjstubbs93@gmail.com",
-    password: "admin93"
-  }
-]
-
-user_attributes.each do | attributes |
-  User.create(attributes)
-end
+user1 = User.create( {
+ email: "athomasgarrett@gmail.com",
+ password: "admin1"
+})
+user2 = User.create( {
+ email: "julianne.peters@gmail.com",
+ password: "123134"
+})
+user3 = User.create( {
+ email: "krisnmccloud@gmail.com",
+ password: "admin2"
+})
+user4 = User.create( {
+ email: "christopherjstubbs93@gmail.com",
+ password: "admin93"
+})
 
 profile_attributes = [
-  {
-    first_name: "Andy",
-    last_name: "Garrett",
-    phone: "+13256602651",
-    home_owner: true,
-    car_owner: true,
-    pet_owner: true,
-    medical: true,
-    financial: true,
-    misc: true,
-    user_id: 1
-  },
-  {
-    first_name: "Julianne",
-    last_name: "Peters",
-    phone: "+12086310997",
-    home_owner: true,
-    car_owner: true,
-    pet_owner: true,
-    medical: true,
-    financial: true,
-    misc: true,
-    user_id: 2
-  },
-  {
-    first_name: "Kristen",
-    last_name: "McCloud",
-    phone: "+16618775640",
-    home_owner: true,
-    car_owner: true,
-    pet_owner: true,
-    medical: true,
-    financial: true,
-    misc: true,
-    user_id: 3
-  },
-  {
-    first_name: "Chris",
-    last_name: "Stubbs",
-    phone: "+16199484194",
-    home_owner: true,
-    car_owner: true,
-    pet_owner: true,
-    medical: true,
-    financial: true,
-    misc: true,
-    user_id: 4
-  }
+ {
+   first_name: "Andy",
+   last_name: "Garrett",
+   phone: "+13256602651",
+   home_owner: true,
+   car_owner: true,
+   pet_owner: true,
+   medical: true,
+   financial: true,
+   misc: true,
+   user_id: user1.id
+ },
+ {
+   first_name: "Julianne",
+   last_name: "Peters",
+   phone: "+12086310997",
+   home_owner: true,
+   car_owner: true,
+   pet_owner: true,
+   medical: true,
+   financial: true,
+   misc: true,
+   user_id: user2.id
+ },
+ {
+   first_name: "Kristen",
+   last_name: "McCloud",
+   phone: "+16618775640",
+   home_owner: true,
+   car_owner: true,
+   pet_owner: true,
+   medical: true,
+   financial: true,
+   misc: true,
+   user_id: user3.id
+ },
+ {
+   first_name: "Chris",
+   last_name: "Stubbs",
+   phone: "+16199484194",
+   home_owner: true,
+   car_owner: true,
+   pet_owner: true,
+   medical: true,
+   financial: true,
+   misc: true,
+   user_id: user4.id
+ }
 ]
 
 profile_attributes.each do | attributes |
-  Profile.create(attributes)
+ Profile.create(attributes)
 end
 
 task_attributes = [
